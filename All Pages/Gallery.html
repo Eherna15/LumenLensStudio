@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #ddd;
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .menu h2 {
+            font-size: 18px;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        .menu button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .menu button:hover {
+            background-color: #555;
+        }
+        .dropdown {
+            display: none;
+            flex-direction: column;
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+        .dropdown a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 0;
+            font-size: 14px;
+            display: block;
+            transition: color 0.3s;
+        }
+        .dropdown a:hover {
+            color: #ddd;
+        }
+        .menu button.active + .dropdown {
+            display: flex;
+        }
+        .gallery-container {
+            margin-left: 270px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery-item {
+            width: calc(33.333% - 20px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+        }
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Temporary Navigation Links Start -->
+    <nav style="text-align: left; background-color: #333232; padding: 10px; border-bottom: 1px solid #ccc;">
+        <div style="display: flex; align-items: center; justify-content: center; background-color: #333232; padding: 10px;">
+            <div style="display: flex; gap: 20px; align-items: center; position: absolute; left: 10px;">
+                <a href="Homepage.html" style="color: white; text-decoration: none;">Home</a>
+                <a href="Gallery.html" style="color: white; text-decoration: none;">Gallery</a>
+                <a href="About.html" style="color: white; text-decoration: none;">About Us</a>
+                <a href="Contact_us.html" style="color: white; text-decoration: none;">Contact Us</a>
+            </div>
+            <div style="font-size: 24px; font-weight: bold; color: white; text-align: center;">
+                Gallery
+            </div>
+        </div>
+    </nav>
+
+    <!-- Interactive Gallery -->
+
+    <section style="padding: 20px; text-align: center;">
+        <h2 style="margin-bottom: 20px;">Our Craft, Your Enjoyment</h2>
+        <div class="gallery-categories">
+            
+            <!-- Event Photography -->
+            <div class="category-thumbnail" onclick="openGallery('event')">
+                <img src="../Images/Portfolio/Events/Events (1).jpg" alt="Event Photography">
+                <div class="category-title">Event</div>
+            </div>
+    
+            <!-- Landscape Photography -->
+            <div class="category-thumbnail" onclick="openGallery('landscape')">
+                <img src="../Images/Portfolio/Landscapes/Landscape (1).jpg" alt="Landscape Photography">
+                <div class="category-title">Landscape</div>
+            </div>
+    
+            <!-- Portrait Photography -->
+            <div class="category-thumbnail" onclick="openGallery('portrait')">
+                <img src="../Images/Portfolio/Portraits/Portrait (1).jpg" alt="Portrait Photography">
+                <div class="category-title">Portrait</div>
+            </div>
+    
+            <!-- Sports Photography -->
+            <div class="category-thumbnail" onclick="openGallery('sports')">
+                <img src="../Images/Portfolio/Sports/Sports (1).jpg" alt="Sports Photography">
+                <div class="category-title">Sports</div>
+            </div>
+    
+            <!-- Street Photography -->
+            <div class="category-thumbnail" onclick="openGallery('street')">
+                <img src="../Images/Portfolio/Street/Street (1).jpg" alt="Street Photography">
+                <div class="category-title">Street</div>
+            </div>
+    
+            <!-- Wildlife Photography -->
+            <div class="category-thumbnail" onclick="openGallery('wildlife')">
+                <img src="../Images/Portfolio/Wildlife/Wildlife (1).jpg" alt="Wildlife Photography">
+                <div class="category-title">Wildlife</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Viewer -->
+    <div id="lightbox" class="lightbox" style="display: none;">
+        <span class="close-btn" onclick="closeGallery()">&times;</span>
+        <img id="lightbox-image" src="" alt="">
+        <div class="nav-btn prev" onclick="changeImage(-1)">&#10094;</div>
+        <div class="nav-btn next" onclick="changeImage(1)">&#10095;</div>
+    </div>
+    
+
+</body>
+
+</html>
+<script src="../script.js"></script>

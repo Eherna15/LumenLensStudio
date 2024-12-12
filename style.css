@@ -1,0 +1,190 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px;
+  margin: 20px auto 0; 
+  max-width: 900px;
+}
+
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+
+/* Gallery Section */
+.gallery {
+  margin-left: 270px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.mosaic-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Small gap between images */
+  justify-content: center;
+  align-items: stretch;
+}
+
+.mosaic-gallery img {
+  flex: 1 1 auto; /* Grow and shrink to fit the container */
+  object-fit: cover; /* Crop images to fit nicely */
+  max-width: 30%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+.mosaic-gallery img:hover {
+  transform: scale(1.05); /* Pop-out effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+  z-index: 10; /* Ensure the hovered image appears above others */
+}
+
+/* Gallery Category Thumbnails */
+.gallery-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 thumbnails per row */
+  gap: 100px; /* Space between thumbnails */
+  justify-items: center; /* Center items within the grid */
+  padding: 20px;
+}
+
+
+.category-thumbnail {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.category-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.category-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.category-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Lightbox Styling */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.nav-btn.prev { left: 30px; }
+.nav-btn.next { right: 30px; }
+
+.category-thumbnail {
+  position: relative;
+  width: 200px; /* Adjust the size of the square */
+  height: 200px; /* Make height equal to width for a square */
+  overflow: hidden; /* Ensure content stays within the square */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.category-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the square without stretching */
+}
+
+

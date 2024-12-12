@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+  
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .form-container h2 {
+            margin: 0 0 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        .form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-container button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    
+
+        
+        <!-- Temporary Navigation Links Start -->
+        <nav style="text-align: left; background-color: #333232; padding: 10px; border-bottom: 1px solid #ccc;">
+            <div style="display: flex; align-items: center; justify-content: center; background-color: #333232; padding: 10px;">
+                <div style="display: flex; gap: 20px; align-items: center; position: absolute; left: 10px;">
+                    <a href="Homepage.html" style="color: white; text-decoration: none;">Home</a>
+                    <a href="Gallery.html" style="color: white; text-decoration: none;">Gallery</a>
+                    <a href="About.html" style="color: white; text-decoration: none;">About Us</a>
+                    <a href="Contact_us.html" style="color: white; text-decoration: none;">Contact Us</a>
+                </div>
+                <div style="font-size: 24px; font-weight: bold; color: white; text-align: center;">
+                    Contact Us
+                </div>
+            </div>
+        </nav><div class="container">
+        <div class="form-container">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
