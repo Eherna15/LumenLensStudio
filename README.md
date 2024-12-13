@@ -4,8 +4,9 @@ Lumen Lens Studio is a photography portfolio website designed to showcase the ar
 
 
 # How to run the website
-In order to correctly run the code and ensure the paths in code are all correct, the root folder must be opened in an IDE that allows folders (Replit has had issues, so VS Code is best option). Once root folder is opened, run the index.html file.
+Download the .zip file, extract all, then open the index.html file by double clicking the file. You should then be taken to your browser and on the website. 
 
+If that does not work for you, you need to open the root folder, (the folder that contains the index.html, script.js, style.css, and the two other folders in it)
 ## Project Structure
 ```
 LumenLensStudio-main/
